@@ -38,3 +38,9 @@ services:
       - '3306:3306'
     expose:
       - 3306
+    container_name: mysql
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8080
