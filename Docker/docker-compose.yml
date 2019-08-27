@@ -12,6 +12,7 @@ services:
     links:
       - db
     container_name: php
+
   apache:
     build:
       context: './apache/'
@@ -23,6 +24,7 @@ services:
       - ../:/var/www/html/
       - ./logs:/var/log/docker
     container_name: apache
+
   db:
     image: mysql:latest
     command: --default-authentication-plugin=mysql_native_password
@@ -39,11 +41,14 @@ services:
     expose:
       - 3306
     container_name: mysql
+    
   adminer:
     image: adminer
     restart: always
     ports:
       - 8081:8080
+    container_name: adminer
+
   phpmyadmin:
     depends_on:
       - db
@@ -54,3 +59,22 @@ services:
     environment:
       PMA_HOST: db
       MYSQL_ROOT_PASSWORD: password
+    container_name: phpmyadmin
+
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+    container_name: mongo
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8083:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: password
+    container_name: mongo-express
