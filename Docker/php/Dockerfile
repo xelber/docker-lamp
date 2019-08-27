@@ -21,3 +21,5 @@ RUN pecl install mcrypt-1.0.2
 RUN docker-php-ext-enable mcrypt
 
 COPY php.ini /usr/local/etc/php/conf.d/php.ini
+
+RUN curl https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
