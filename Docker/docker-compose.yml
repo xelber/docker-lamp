@@ -68,6 +68,8 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: password
     container_name: mongo
+    volumes:
+      - ./mongo-data:/data/db
 
   mongo-express:
     image: mongo-express
