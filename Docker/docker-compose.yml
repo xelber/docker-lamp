@@ -23,6 +23,7 @@ services:
     volumes:
       - ../:/var/www/html/
       - ./logs:/var/log/docker
+      - ./sites-enabled:/usr/local/apache2/sites-enabled
     container_name: apache
 
   db:
@@ -69,7 +70,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: password
     container_name: mongo
     volumes:
-      - ./mongo-data:/data/db
+      - mongo-data:/data/db
 
   mongo-express:
     image: mongo-express
@@ -80,3 +81,6 @@ services:
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
       ME_CONFIG_MONGODB_ADMINPASSWORD: password
     container_name: mongo-express
+
+volumes:
+  mongo-data:
