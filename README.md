@@ -4,6 +4,8 @@ Also inclues Adminer, PHPMyAdmin and Mongoexpress.
 
 - Ability to add your own vhost
 - Supports xdebug  
+- Composer ready
+- Symfony ready
 
 ## How to use
 Clone the repo
