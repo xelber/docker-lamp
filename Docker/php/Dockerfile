@@ -1,12 +1,13 @@
 FROM php:7.3-fpm
 RUN apt-get update && apt-get install -y \
         vim \
+        wget \
+        git \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
         libpng-dev \
         libmcrypt-dev \
         libzip-dev \
-    && docker-php-ext-install -j$(nproc) iconv \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-install -j$(nproc) gd
 RUN pecl install mongodb \
@@ -27,3 +28,9 @@ RUN curl https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin
 RUN pecl install xdebug
 RUN docker-php-ext-enable xdebug
 COPY xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
+
+RUN wget https://get.symfony.com/cli/installer -O - | bash
+RUN mv /root/.symfony/bin/symfony /usr/local/bin/symfony
+
+RUN git config --global user.email "user@example.com"
+RUN git config --global user.name "System"
