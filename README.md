@@ -1,2 +1,6 @@
 # docker-lamp
-PHP MySQL and nginx development environment based on docker
+PHP, MySQL, Apache, Mongo development environment based on docker.
+Also inclues Adminer, PHPMyAdmin and Mongoexpress.
+
+- Ability to add your own vhost
+- Supports xdebug  
