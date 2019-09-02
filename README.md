@@ -1,4 +1,4 @@
-# docker-lamp
+# Docker lamp
 PHP, MySQL, Apache, Mongo development environment based on docker.
 Also inclues Adminer, PHPMyAdmin and Mongoexpress.
 
