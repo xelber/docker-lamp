@@ -1,7 +1,14 @@
 # Docker lamp
-PHP, MySQL, Apache, Mongo development environment based on docker.
-Also inclues Adminer, PHPMyAdmin and Mongoexpress.
+A highly customizable PHP, MySQL, Apache, Mongo development environment based on docker.
+Containers include
+- PHP7.3
+- MySQL Latent
+- Mongodb
+- Adminer
+- PHPMyAdmin
+- Mongo express
 
+Comes with following features
 - Ability to add your own vhost
 - Supports xdebug  
 - Composer ready
