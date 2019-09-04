@@ -15,12 +15,13 @@ Comes with following features
 - Symfony ready
 
 ## How to use
-Clone the repo
 ```Bash
+git clone git@github.com:xelber/docker-lamp.git docker-lamp
+cd docker-lamp
 cd Docker
 docker-compose up -d
 ```
-visit http://localhost/ for default home page
+visit http://localhost/ for default home page, this will link in to Adminer, PHPMyAdmin and Mongo Express
 
 ## Add you own vhost
 An example can be found at Docker/sites-enabled/default.conf, copy and change as neede.
