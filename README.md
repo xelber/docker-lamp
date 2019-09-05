@@ -63,3 +63,37 @@ Restart instances with following (Make sure you are in Docker folder)
 docker-compose.exe up -d --build
 ```
 Laravel now should be accessible at http://laravel.docker
+
+### Symfony
+Create your Symfony installation at site/symfony. 
+```Bash
+cd Docker
+docker exec -it php /bin/bash
+cd /var/www/html/sites
+symfony new --full symfony
+exit
+```
+Above I am assuming your Symfony project folder is named 'symfony'  
+Create a vhost file    
+File location : Docker/sites-enabled/symfony.conf
+```
+<VirtualHost *:80>
+    ServerName symfony.docker
+    ProxyPassMatch ^/(.*\.php(/.*)?)$ fcgi://php:9000/var/www/html/sites/symfony/public/$1
+    DocumentRoot /var/www/html/sites/symfony/public/
+    <Directory /var/www/html/sites/symfony/public/>
+        DirectoryIndex index.html index.php
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    CustomLog /var/log/docker/apache-site-symfony-access.log common
+    ErrorLog /var/log/docker/apache-site-symfony-error.log
+</VirtualHost>
+```
+Update your hosts file so that symfony.docker points to 127.0.0.1  
+Restart instances with following (Make sure you are in Docker folder)  
+```Bash
+docker-compose.exe up -d --build
+```
+Laravel now should be accessible at http://symfony.docker
