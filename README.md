@@ -19,9 +19,11 @@ Comes with following features
 git clone git@github.com:xelber/docker-lamp.git docker-lamp
 cd docker-lamp
 cd Docker
+cp .env.sample .env
+# Update .env file as needed. default should be fine, if you wanna just test it out first
 docker-compose up -d
 ```
-visit http://localhost/ for default home page, this will link in to Adminer, PHPMyAdmin and Mongo Express
+visit http://localhost/ for default home page, this will link in to Adminer, PHPMyAdmin and Mongo Express  
 
 ## Add you own vhost
 An example can be found at Docker/sites-enabled/default.conf, copy and change as neede.
