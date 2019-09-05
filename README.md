@@ -29,7 +29,7 @@ visit http://localhost/ for default home page, this will link in to Adminer, PHP
 An example can be found at Docker/sites-enabled/default.conf, copy and change as neede.
 
 ### Laravel
-Create your laravel installation at site/laravel
+Create your laravel installation at site/laravel.  
 There are multiple ways you can do this, but since this is composer ready, you can ssh on to the PHP instance and do the following
 ```Bash
 cd Docker
