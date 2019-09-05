@@ -96,4 +96,4 @@ Restart instances with following (Make sure you are in Docker folder)
 ```Bash
 docker-compose.exe up -d --build
 ```
-Laravel now should be accessible at http://symfony.docker
+Symfony app now should be accessible at http://symfony.docker
