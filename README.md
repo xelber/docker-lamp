@@ -2,7 +2,7 @@
 A highly customizable PHP, MySQL, Apache, Mongo development environment based on docker.
 Containers include
 - PHP7.3
-- MySQL Latent
+- MySQL
 - Mongodb
 - Adminer
 - PHPMyAdmin
