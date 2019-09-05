@@ -34,7 +34,7 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     volumes:
-    - ./mysql-data:/var/lib/mysql
+    - data:/var/lib/mysql
     environment:
     - MYSQL_DATABASE=db
     - MYSQL_USER=admin
@@ -73,7 +73,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: password
     container_name: mongo
     volumes:
-      - mongo-data:/data/db
+      - data:/data/db
 
   mongo-express:
     image: mongo-express
@@ -86,4 +86,4 @@ services:
     container_name: mongo-express
 
 volumes:
-  mongo-data:
+  data:
