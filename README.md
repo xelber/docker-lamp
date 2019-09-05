@@ -39,7 +39,8 @@ composer create-project --prefer-dist laravel/laravel laravel
 exit
 ```
 Above I am assuming your Laravel project folder is named 'laravel'
-Create a vhost conf, for example for a Laravel installation, it would look like following
+Create a vhost conf, for example for a Laravel installation, it would look like following.  
+File location : Docker/sites-enabled/laravel.conf
 ```
 <VirtualHost *:80>
     ServerName laravel.docker
