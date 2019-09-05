@@ -1,5 +1,5 @@
 # Docker lamp
-A highly customizable PHP, MySQL, Apache, Mongo development environment based on docker.
+A highly customizable PHP, MySQL, Apache, Mongo development environment based on docker.  
 Containers include
 - PHP (Defaults to 7.3, can be changed in .env)
 - MySQL
