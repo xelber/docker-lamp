@@ -4,7 +4,10 @@ services:
     build:
       context: './php/'
       args:
-        - WITH_XDEBUG=true
+        - WITH_XDEBUG=${WITH_XDEBUG:-0}
+        - PHP_VERSION=${PHP_VERSION:-7.3}
+        - GIT_USER=${GIT_USER}
+        - GIT_EMAIL=${GIT_EMAIL}
     ports:
       - "9000:9000"
     volumes:
@@ -12,7 +15,7 @@ services:
     links:
       - db
     container_name: php
-
+    env_file: .env
   apache:
     build:
       context: './apache/'
