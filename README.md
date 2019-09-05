@@ -94,6 +94,6 @@ File location : Docker/sites-enabled/symfony.conf
 Update your hosts file so that symfony.docker points to 127.0.0.1  
 Restart instances with following (Make sure you are in Docker folder)  
 ```Bash
-docker-compose.exe up -d --build
+docker-compose up -d --build
 ```
 Symfony app now should be accessible at http://symfony.docker
