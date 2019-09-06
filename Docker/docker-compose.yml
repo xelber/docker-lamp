@@ -16,6 +16,7 @@ services:
       - db
     container_name: php
     env_file: .env
+
   apache:
     build:
       context: './apache/'
@@ -45,7 +46,7 @@ services:
     expose:
       - 3306
     container_name: mysql
-    
+
   adminer:
     image: adminer
     restart: always
