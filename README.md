@@ -60,7 +60,7 @@ File location : Docker/sites-enabled/laravel.conf
 Update your hosts file so that laravel.docker points to 127.0.0.1  
 Restart instances with following (Make sure you are in Docker folder)  
 ```Bash
-docker-compose.exe up -d --build
+docker-compose up -d --build
 ```
 Laravel now should be accessible at http://laravel.docker
 
