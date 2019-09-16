@@ -1,0 +1,13 @@
+<VirtualHost *:80>
+    ServerName laravel.docker
+    ProxyPassMatch ^/(.*\.php(/.*)?)$ fcgi://php:9000/var/www/html/sites/laravel/public/$1
+    DocumentRoot /var/www/html/sites/laravel/public/
+    <Directory /var/www/html/sites/laravel/public/>
+        DirectoryIndex index.html index.php
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    CustomLog /var/log/docker/apache-site-laravel-access.log common
+    ErrorLog /var/log/docker/apache-site-laravel-error.log
+</VirtualHost>
