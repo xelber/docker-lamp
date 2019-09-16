@@ -42,3 +42,4 @@ RUN mv /root/.symfony/bin/symfony /usr/local/bin/symfony
 RUN git config --global user.email "$GIT_EMAIL"
 RUN git config --global user.name "$GIT_USER"
 
+RUN apt-get install -y npm
