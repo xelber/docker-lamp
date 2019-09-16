@@ -5,9 +5,9 @@
     <title>Docker LAMP</title>
 </head>
 <body>
-    <p><a href="/index.php">PHP Info</a></p>
-    <p><a href="<?php echo $_SERVER['SERVER_NAME']?>:8081">Adminer</a></p>
-    <p><a href="<?php echo $_SERVER['SERVER_NAME']?>:8082">PHPMyAdmin</a></p>
-    <p><a href="<?php echo $_SERVER['SERVER_NAME']?>:8083">Mongo Express</a></p>
+    <p><a href="/info.php">PHP Info</a></p>
+    <p><a href="//<?php echo $_SERVER['SERVER_NAME']?>:8081">Adminer</a></p>
+    <p><a href="//<?php echo $_SERVER['SERVER_NAME']?>:8082">PHPMyAdmin</a></p>
+    <p><a href="//<?php echo $_SERVER['SERVER_NAME']?>:8083">Mongo Express</a></p>
 </body>
 </html>
